@@ -16,7 +16,6 @@ gem "pry"
 
 gem "rails-ujs"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
 # Use Puma as the app server
 gem "puma", "~> 3.11"
 # Use SCSS for stylesheets
@@ -46,6 +45,7 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
+  gem "sqlite3"
 end
 
 group :development do
@@ -61,6 +61,10 @@ group :test do
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
+end
+
+group :production do
+  gem "pg", "0.20.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

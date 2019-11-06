@@ -38,18 +38,18 @@ class PasswordResetsController < ApplicationController
   def get_user
     @user = User.find_by email: params[:email]
     return if @user
-
     flash[:danger] = t "password_resets.danger"
     redirect_to login_path
   end
 
   def valid_user
-    redirect_to root_path unless @user&.activated? && @user&.authenticated?(:reset, params[:id])
+    return if @user&.activated? && @user&.authenticated?(:reset, params[:id])
+    redirect_to root_path
+    flash[:danger] = t ".valid_user"
   end
 
   def check_expiration
     return unless @user.password_reset_expired?
-
     flash[:danger] = t ".password_reset"
     redirect_to new_password_reset_path
   end

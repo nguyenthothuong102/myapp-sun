@@ -154,6 +154,8 @@ en:
       danger: "Invalid activation link"
   password_resets:
     danger: "Email don't exist!"
+    valid_user: "False!"
+    danger_email: "Email Does not exist."
     edit:
       title: "Reset password"
       txt1: "Reset password"
@@ -161,6 +163,7 @@ en:
       password: "Passsword"
       password_confirmation: "Password Confirmation"
       update: "Update password"
+    danger_expired: "Password reset has expired."
     new:
       title: "Forgot password"
       txt2: "Forgot password"
@@ -188,3 +191,8 @@ en:
   relationships:
     danger: "User does not exist!"
     danger_nil: "User nil!"
+    update:
+      text1: "can't be empty"
+      text2: "Password has been reset."
+      password_has_been_reset: "Password updated successfully"
+      success: "Update successfully"

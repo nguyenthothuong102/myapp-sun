@@ -155,6 +155,8 @@ vi:
       danger: "Liên kết kích hoạt không hợp lệ!"
   password_resets:
     danger: "Email không tồn tại."
+    valid_user: "Thất bại!"
+    danger_email: "Email không tồn tại."
     edit:
       title: "Đặt lại mật khẩu"
       txt1: "Đặt lại mật khẩu"
@@ -188,3 +190,9 @@ vi:
   relationships:
     danger: "Người dùng không tồn tại!"
     danger_nil: "Người dùng nil!"
+    danger_expired: "Đặt lại mật khẩu đã hết hạn."
+    update:
+      text1: "không thể để trống"
+      text2: "Mật khẩu đã được đặt lại."
+      password_has_been_reset: "Cập nhật mật khẩu thành công"
+      success: "Cập nhật thành công"
