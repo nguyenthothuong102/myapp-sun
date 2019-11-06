@@ -34,7 +34,7 @@ vi:
       text4: "hướng dẫn về Ruby on Rails "
       text3: "ứng dụng mẫu."
       text5: "Đăng ký ngay!"
-      micropost_feed: "Micropost Feed"
+      micropost_feed: "Bài đăng"
     help:
       help: "Trợ giúp"
       content1: "Nhận trợ giúp Ruby on Rails Tutorial tại "
@@ -64,6 +64,15 @@ vi:
   users:
     danger_login: "Hãy đăng nhập."
     danger_user: "Tài khoản không tồn tại!"
+    following: "Đang theo dõi"
+    followers: "Người theo dõi"
+    show_follow:
+      view: "Hồ sơ"
+      microposts: "Bài đăng: "
+    follow:
+      follow: "Theo dõi"
+    unfollow:
+      unfollow: "Bỏ theo dõi"
     new:
       sign-up: "Đăng ký"
       text1: "Đăng ký"
@@ -98,6 +107,9 @@ vi:
       placeholder: "Soạn bài đăng mới..."
       post: "Đăng bài"
       micropost_form_notify: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tập tin nhỏ hơn."
+    stats:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
     user_info:
       view: "Hồ sơ"
       micropost: "Bài đăng"
@@ -172,3 +184,5 @@ vi:
     destroy:
       danger: "That bai!"
       success: "Xóa bài đăng thành công!"
+  relationships:
+    danger: "Người dùng không tồn tại!"

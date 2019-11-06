@@ -62,6 +62,15 @@ en:
   users:
     danger_login: "Please login."
     danger_user: "User not exists!"
+    following: "Following"
+    followers: "Followers"
+    show_follow:
+      view: "View my profile"
+      microposts: "Microposts: "
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
     new:
       sign-up: "Sign up"
       text1: "Sign up"
@@ -97,6 +106,9 @@ en:
       placeholder: "Soạn bài đăng mới..."
       post: "Đăng bài"
       micropost_form_notify: "Maximum file size is 5MB. Please choose a smaller file."
+    stats:
+      following: "Following"
+      followers: "Followers"
     user_info:
       view: "View my profile"
       micropost: "micropost"
@@ -172,3 +184,5 @@ en:
     destroy:
       success: "Micropost deleted"
       danger: "False!"
+  relationships:
+    danger: "User does not exist!"
