@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to root_path && return unless @user.activated?
+    @microposts = @user.microposts.paginate page: params[:page], per_page: Settings.size.s_10
+    @user_follow = current_user.active_relationships.find_by(followed_id: @user.id)
   end
 
   def new
@@ -13,11 +15,11 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.actived.paginate page: params[:page]
+    @users = User.actived.paginate page: params[:page], per_page: Settings.size.s_10
   end
 
   def destroy
-    if @user.destroy?
+    if @user.destroy
       flash[:success] = t ".success"
       redirect_to users_path
     else
@@ -45,6 +47,18 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def following
+    @title = t "users.following"
+    @users = @user.following.paginate page: params[:page], per_page: Setting.size.s_10
+    render "show_follow"
+  end
+
+  def followers
+    @title = t "users.followers"
+    @users = @user.followers.paginate page: params[:page], per_page: Setting.size.s_10
+    render "show_follow"
   end
 
   private

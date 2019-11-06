@@ -13,6 +13,8 @@ link12: "http://www.michaelhartl.com/"
 link13: "https://www.railstutorial.org/"
 link14: "http://rubyonrails.org/"
 link15: "rails.png"
+link16: "<%= following_user_path(@user) %>"
+link17: "<%= followers_user_path(@user) %>"
 size:
   max_name: 50
   max_email: 255
