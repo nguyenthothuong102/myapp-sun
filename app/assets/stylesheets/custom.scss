@@ -28,7 +28,7 @@ textarea {
 }
 
 .navbar{
-  background-color: black;
+  background-color: $black;
 }
 
 #logo{
@@ -157,13 +157,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: $white;
     text-decoration: none;
   }
 }
@@ -256,9 +256,9 @@ input {
 }
 
 #error_explanation {
-  color: red;
+  color: $red;
   ul {
-    color: red;
+    color: $red;
     margin: 0 0 30px 0;
   }
 }
@@ -356,14 +356,14 @@ span.picture {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
+    color: $gray;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: $blue;
     }
   }
   strong {

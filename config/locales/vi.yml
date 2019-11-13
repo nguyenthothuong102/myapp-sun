@@ -154,6 +154,7 @@ vi:
       success: "Kích hoạt tài khoản!"
       danger: "Liên kết kích hoạt không hợp lệ!"
   password_resets:
+    danger: "Email không tồn tại."
     edit:
       title: "Đặt lại mật khẩu"
       txt1: "Đặt lại mật khẩu"
@@ -186,3 +187,4 @@ vi:
       success: "Xóa bài đăng thành công!"
   relationships:
     danger: "Người dùng không tồn tại!"
+    danger_nil: "Người dùng nil!"

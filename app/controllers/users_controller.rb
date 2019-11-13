@@ -5,8 +5,9 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def show
-    redirect_to root_path  && return unless @user.activated?
+    redirect_to root_path && return unless @user.activated?
     @microposts = @user.microposts.paginate page: params[:page], per_page: Settings.size.s_10
+    @user_follow = current_user.active_relationships.find_by(followed_id: @user.id)
   end
 
   def new
@@ -49,17 +50,15 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = t"users.following"
-    @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
-    render 'show_follow'
+    @title = t "users.following"
+    @users = @user.following.paginate page: params[:page], per_page: Settings.size.s_10
+    render "show_follow"
   end
 
   def followers
-    @title = t"users.followers"
-    @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
-    render 'show_follow'
+    @title = t "users.followers"
+    @users = @user.followers.paginate page: params[:page], per_page: Settings.size.s_10
+    render "show_follow"
   end
 
   private

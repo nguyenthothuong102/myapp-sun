@@ -16,13 +16,11 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    if params[:user][:password].empty?
-      @user.errors.add:password, t(".text1")
-      render :edit
-    elsif @user.update_attributes user_params
+    @user.assign_attributes user_params
+    if @user.save context: :reset_pass
       log_in @user
       @user.update_attribute :reset_digest, nil
-      flash[:success] = t".text2"
+      flash[:success] = t ".text2"
       redirect_to @user
     else
       render :edit

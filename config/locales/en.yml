@@ -153,6 +153,7 @@ en:
       success: "Account activated!"
       danger: "Invalid activation link"
   password_resets:
+    danger: "Email don't exist!"
     edit:
       title: "Reset password"
       txt1: "Reset password"
@@ -186,3 +187,4 @@ en:
       danger: "False!"
   relationships:
     danger: "User does not exist!"
+    danger_nil: "User nil!"
