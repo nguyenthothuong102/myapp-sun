@@ -17,7 +17,7 @@ gem "pry"
 gem "rails-ujs"
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.3"
 # Use SCSS for stylesheets
 gem "rails-controller-testing"
 gem "sass-rails", "~> 5"
